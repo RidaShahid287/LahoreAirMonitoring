@@ -1,0 +1,280 @@
+$themeCol1:  #55eae3;
+.home{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    .overlay{
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        background: rgb(47, 106, 127);
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        mix-blend-mode: hard-light;
+    }
+    video{
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        object-fit: cover;
+    }
+    .homeContent{
+        width: 100%;   
+        height: max-content;
+        padding: 8rem 1.5rem 3rem;
+        display: flex;
+        row-gap: 3rem;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        margin: auto;
+        color: #fff;
+        z-index: 1;
+        .textDiv{
+            padding: 2rem 0;
+            .smallText{
+                font-size: 13px;
+                text-transform: uppercase;
+            }
+            .homeTitle{
+                position: relative;
+                font-size: 1.8rem;
+            }
+        
+            .button {
+                position: absolute;
+                display: block;
+                width: 230px;
+                height: 42px;
+                color: $themeCol1;
+                font-size: 21px;
+                line-height: 200%;
+                text-transform: uppercase;
+              text-decoration: none;
+                text-align: center;
+                z-index: 1;
+                & span {
+                    position: absolute;
+                    transition-property: all;
+                    transition-duration: .2s;
+                    transition-timing-function: ease-out;
+                    z-index: 1;
+                }
+                & .border {
+                    border: 1px solid $themeCol1;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: rgba(0,0,0,0.6);
+                }
+                & .top, & .bottom, & .left, & .right {
+                    background-color: $themeCol1;
+                    height: 1px;
+                    width: 0;
+                }
+                & .left, & .right { height: 0; width: 1px; }
+                & .top {
+                    top: -5px;
+                    left: -15px;
+                }
+                & .bottom {
+                    bottom: -5px;
+                    right: -15px;
+                }
+                & .left {
+                    top: -15px;
+                    right: -5px;
+                }
+                & .right {
+                    bottom: -15px;
+                    left: -5px;
+                }
+                &:hover {
+                    color: #fff;
+                    & .border {
+                        top: -5px;
+                        bottom: -5px;
+                        left: -5px;
+                        right: -5px;
+                    }
+                    & .top, & .bottom { width: 230px; }
+                    & .left, & .right { height: 40px; }
+                    & .top { left: -5px; }
+                    & .bottom { right: -5px; }
+                    & .left { top: -5px; }
+                    & .right { bottom: -5px; }
+                }
+                & .text {
+                    position: relative;
+                    letter-spacing: .03em;
+                }
+            }
+        }
+        .cardDiv{
+            position: relative;
+            padding: 2rem 1rem;
+            background-color: #fff;
+            border-radius: 10px;
+            gap: 1rem;
+            
+            label{
+                display: block;
+                color: rgb(83, 83, 83);
+                padding-bottom: 10;
+                font-size: 13px;
+                font-weight: 500;
+            }
+            .label_total{
+                justify-content: space-between;
+                align-items: center;
+
+                .total{
+                    color: rgb(83, 83, 83);
+                    font-size: 18px;
+                    padding-bottom: 10px;
+
+                }
+            }
+            .input{
+                height: 40px;
+                padding: 0 1rem;
+                border-radius: 3rem;
+                background-color: #f1f0f0;
+
+                input{
+                    background: none;
+                    border: none;
+                    outline: none;
+                    width: 100%;
+                    font-size: 13px;
+                    font-weight: 500;
+                    &::placeholder{
+                        font-size: 13px;
+                    }
+                }
+                .icon{
+                    font-size: 18px;
+                    color: rgb(83, 83, 83) !important;
+                    margin-left: 10px;
+
+                }
+                .input[type=range]{
+                    background-color: rgb(84, 84, 84) !important;
+                }
+            }
+            .searchOptions{
+                position: absolute;
+                background: #038982;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #48b1bf, #038982);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #48b1bf, #038982); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+                width: max-content;
+                bottom: -0.7rem;
+                column-gap: .8rem;
+                padding: 7px 2rem !important;
+                border-radius: 3rem;
+                left: 50%;
+                transform: translate(-50%);
+                justify-content: center;
+                cursor: pointer;
+                &:hover{
+                    background: #04c0b6;  /* fallback for old browsers */
+                    background: -webkit-linear-gradient(to right, #53cddd, #04c0b6);  /* Chrome 10-25, Safari 5.1-6 */
+                    background: linear-gradient(to right, #53cddd, #04c0b6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */                    
+                }
+                .icon{
+                    font-size: 14px;
+                }
+                span{
+                    font-size: 13px;
+                }
+            }
+        }
+        .homeFooterIcons{
+            width: 100%;
+            justify-content: space-between;
+            .icon{
+                font-size: 20px;
+                margin: 0 5px;
+                color: #fff;
+                font-weight: 600;
+                &:hover{
+                    color: rgb(147, 145, 145);
+                }
+            }
+        } 
+    }
+}
+@media screen and (min-width: 500px){
+    .home{
+        .homeContent{
+            .textDiv{
+                .smallText{
+                    font-size: 16px;
+                }
+                .homeTitle{
+                    position: relative;
+                    font-size: 2.3rem;
+                    width: max-content;
+                    &::after{
+                        position: absolute;
+                        content: '';
+                        background-color: #04c0b6;
+                        height: 5px;
+                        width: 145px;
+                        right: 0px;
+                        bottom: 5px;
+                        z-index: -1;
+                    }
+                }
+            }
+            .cardDiv{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
+@media screen and (min-width: 600px){
+    .home{
+        .homeContent{
+            .cardDiv{
+                padding: 2rem 1rem;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    }
+}
+@media screen and (min-width: 940px){
+    .home{
+       height: 85vh;
+    }
+}
+@media screen and (min-width: 1240px){
+    .home{
+       height: 95vh;
+       .homeContent{
+        padding-left: 0;
+        padding-right: 0;
+        .cardDiv{
+            padding: 2rem 1rem;
+            grid-template-columns: repeat(3,1fr);
+           .input{
+            margin-bottom: 1rem;
+           }
+           .searchOptions{
+            border: -1rem;
+            padding: 9px 1px;
+            span{
+                font-size: 17px;
+            }
+           }
+        }
+       }
+    }
+}

@@ -1,0 +1,128 @@
+.main{
+    width: 100%;
+    margin-top: 100px;
+    .secTitle{
+        .title{
+            font-size: 35px;
+            position: relative;
+            width: max-content;
+            color: rgb(7, 7, 7);
+            margin: 1rem 0;
+            z-index: 3;
+        }
+    }
+
+.secContent1{
+    justify-content: center;
+    gap: 1.5rem;
+    .singleDestination{
+        height: 100%;
+        display: grid;
+        row-gap: 10px;
+        border-radius: 10px;
+        align-items: center;
+        background-color: #e2e0e0;
+        box-shadow: 0 2px 4px rgba(140, 140, 141, 0.549);
+        overflow: hidden;
+        &:hover{
+            background-color: #eeeded;
+            box-shadow: 1px 4px 4px rgba(85, 85, 114, 0.549);
+            transition: .3s ease;
+        }
+        .imgDiv{
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover !important;
+                transition: .2s ease;
+            }
+            &:hover{
+                img{
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .cardInfo{
+            padding: 1rem;
+            .destTitle{
+                font-size: 1.25rem;
+                color: #000;
+            }
+            .continent{
+                gap: .5rem;
+                .icon{
+                    font-size: 18px;
+                    color: rgb(83, 83, 83) !important;
+                }
+                .name{
+                    font-weight: 400;
+                    font-size: 14px;
+                    color: rgb(77, 76, 76);
+                }
+            }
+            .fees {
+                width: 100%;
+                justify-content: space-between;
+                padding: 1rem;
+                margin: 1rem 0;
+                border-top: 1.5px solid rgb(194, 194, 194);
+                border-bottom: 1.5px solid rgb(194, 194, 194);
+                color: rgb(77, 76, 76);
+                  small{
+                    text-align: center;
+                    background: #038982;  /* fallback for old browsers */
+                    background: -webkit-linear-gradient(to right, #48b1bf, #038982);  /* Chrome 10-25, Safari 5.1-6 */
+                    background: linear-gradient(to right, #48b1bf, #038982);
+                    border-radius: 1rem;
+                    padding: 1px 10px;
+                    color: #fff;
+                    font-size: 10px;
+                  } 
+            }
+            .desc{
+                font-size: 13.5px;
+                color: rgb(77, 76, 76);
+                font-weight: 500;
+            }
+            .btn{
+                margin-top: 1rem;
+                font-weight: 600;
+                gap: .5rem;
+                justify-content: space-between;
+                .icon{
+                    font-size: 18px;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+}
+@media screen and (min-width: 500px){ //for mobile
+   .title{
+    font-size: 1.5rem;
+    &::after{
+        width: 155px !important;
+    }
+   }
+   .secContent{
+    grid-template-columns: repeat(1,1fr);
+    .singleDestination{
+        height: auto;
+    }
+   }
+}
+@media screen and (min-width: 840px){ //for laptop
+    .secContent1{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .secContent{
+     grid-template-columns: repeat(3,1fr);
+     .singleDestination{
+         height: auto;
+     }
+    }
+ }
